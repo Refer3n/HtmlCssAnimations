@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.outerSpaceContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+video {
+    position: absolute;
+    z-index: -2;
+}
+
+.moon {
+    margin: auto;
+    animation: spin;
+    animation-duration: 49s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.asteroid1st {
+    position: absolute;
+    opacity: 0;
+    animation: Motion1st 47s ease-out 10s infinite;
+}
+
+.asteroid2st {
+    position: absolute;
+    opacity: 0;
+    animation: Motion2st 50s ease-out 12s infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes Motion1st {
+    0% {
+        opacity: 1;
+        transform: translateX(-10vw) translateY(5vh) rotate(0deg);
+    }
+    40% {
+        transform: translateX(105vw) translateY(20vh) rotate(360deg);
+    }
+    41% {
+        transform: translateX(105vw) translateY(105vh);
+    }
+    70% {
+        transform: translateX(40vw) translateY(105vh) rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(105vw) translateY(32vh) rotate(360deg);
+    }
+}
+
+@keyframes Motion2st {
+    0% {
+        opacity: 1;
+        transform: translateX(40vw) translateY(105vh) rotate(0deg);;
+    }
+    33% {
+        transform: translateX(105vw) translateY(32vh) rotate(180deg);;
+    }
+    34% {
+        transform: translateX(105vw) translateY(105vh);
+    }
+    35% {
+        transform: translateX(-10vw) translateY(105vh);
+    }
+    55% {
+        transform: translateX(-10vw) translateY(5vh) rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(105vw) translateY(20vh) rotate(360deg);
+    }
+}
